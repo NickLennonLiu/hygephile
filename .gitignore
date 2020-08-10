@@ -4,3 +4,5 @@ mysite/settings.py
 *.json
 admin.md
 design
+media/pics/*
+media/snap/*

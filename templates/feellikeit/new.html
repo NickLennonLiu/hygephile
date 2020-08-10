@@ -11,7 +11,8 @@
 
 <body>
     <div class="container input-area"><strong style="margin: 20px;font-size: 30px;">Feel Like it?</strong>
-        <form class="input-form" method="post" action="{% url 'new' %}">
+        <form class="input-form" method="post" enctype="multipart/form-data" action="{% url 'new' %}">
+            {% csrf_token %}
             <div class="input-row"><label for="date">When?</label><input class="form-control" type="datetime-local" name="date" id="date"></div>
             <div class="input-row"><label for="reason">Why?</label><input class="form-control" type="text" name="reason" id="reason"></div>
             <div class="input-row"><label for="snap">Evidence?</label><input type="file" name="snap" required="" accept="image/*" id="snap"></div>

@@ -15,7 +15,8 @@ def new(request):
     if request.method == "POST":
         date = request.POST.get("date")
         reason = request.POST.get("reason")
-        snap = request.POST.get("snap")
+        snap = request.FILES.get("snap")
         no = request.POST.get("no")
         FeelLikeIt.objects.create(date=date, reason=reason, snap=snap, no=no)
-        return HttpResponseRedirect(reverse('feellikeit:index'))
+
+        return HttpResponseRedirect(reverse('index'))
