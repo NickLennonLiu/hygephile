@@ -18,5 +18,4 @@ def new(request):
         snap = request.FILES.get("snap")
         no = request.POST.get("no")
         FeelLikeIt.objects.create(date=date, reason=reason, snap=snap, no=no)
-
         return HttpResponseRedirect(reverse('index'))
