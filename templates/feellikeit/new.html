@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Feel like it?</title>
+    <link rel="stylesheet" href={% static 'css/feellikeit.css' %}>
+    <link rel="stylesheet" href={% static 'css/bootstrap.min.css' %}>
+</head>
+
+<body>
+    <div class="container input-area"><strong style="margin: 20px;font-size: 30px;">Feel Like it?</strong>
+        <form class="input-form" method="post" action="{% url 'new' %}">
+            <div class="input-row"><label for="date">When?</label><input class="form-control" type="datetime-local" name="date" id="date"></div>
+            <div class="input-row"><label for="reason">Why?</label><input class="form-control" type="text" name="reason" id="reason"></div>
+            <div class="input-row"><label for="snap">Evidence?</label><input type="file" name="snap" required="" accept="image/*" id="snap"></div>
+            <div class="input-row"><label for="no">No!</label><input class="form-control" type="text" name="no" id="no"></div><button class="btn btn-primary" type="submit"><strong>だが断る！</strong><br></button></form>
+    </div>
+    <script src={% static 'js/bootstrap.min.js' %}></script>
+    <script src={% static 'js/jquery.min.js' %}></script>
+</body>
+
+</html>

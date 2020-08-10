@@ -6,3 +6,5 @@ from django.db import models
 class FeelLikeIt(models.Model):
     date = models.DateTimeField()
     reason = models.TextField()
+    snap = models.ImageField()
+    no = models.TextField()

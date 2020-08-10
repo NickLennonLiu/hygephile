@@ -1,0 +1,40 @@
+.container.input-area {
+  max-width: 500px;
+  border-radius: 30px;
+  background-color: lightyellow;
+  padding: 10px 20px;
+  border-style: inset;
+  border-width: 2px;
+  border-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-top: 50px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.form-control {
+  max-width: 200px;
+}
+
+label {
+  width: 100px;
+  font-weight: 700;
+}
+
+[type=file] {
+  max-width: 200px;
+}
+
+.input-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
