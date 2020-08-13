@@ -6,7 +6,13 @@ from django.urls import reverse
 
 # Create your views here.
 def index(request):
-    return HttpResponse(FeelLikeIt.objects.count())
+    times = FeelLikeIt.objects.count()
+    last_time = FeelLikeIt.objects.last().date
+    content = {
+        "times": times,
+        "last_time": last_time,
+    }
+    return render(request, 'feellikeit/statics.html', content)
 
 
 def new(request):
